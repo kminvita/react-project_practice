@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div>{number}</div>
-      <button onClick={double}>
+      <button className="btn btn-primary" onClick={double}>
         Submit
       </button>
     </>
