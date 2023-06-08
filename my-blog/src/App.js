@@ -1,16 +1,21 @@
+import { useState } from "react";
+
 function App() {
-  const number = 1;
+  console.log('render');
+  const [number, setNumber] = useState(1); // [변수, 함수]
 
-  const double = (number) => {
-    return number * 2;
+  const double = () => {
+    // const doubledNumber = number * 2;
+    setNumber((prevState) => prevState * 2);
+    setNumber((prevState) => prevState * 2);
   };
-
-  double();
 
   return (
     <>
-      <div>{double(number)}</div>
-      <button>Submit</button>
+      <div>{number}</div>
+      <button onClick={double}>
+        Submit
+      </button>
     </>
   );
 }
